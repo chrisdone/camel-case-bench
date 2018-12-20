@@ -17,6 +17,11 @@ fn get_benches() -> Vec<Bench> {
             args: vec!["-O2", "impls/c-inplace.c", "-o", "exes/c-inplace"],
         }
         , Bench {
+            name: "haskell-chrisdone",
+            compiler: "stack",
+            args: vec!["ghc", "--", "-O2", "impls/haskell-chrisdone.hs", "-o", "exes/haskell-chrisdone"],
+        }
+        , Bench {
             name: "rust-inplace",
             compiler: "rustc",
             args: vec!["-O", "impls/rust-inplace.rs", "-o", "exes/rust-inplace"],
@@ -31,11 +36,11 @@ fn get_benches() -> Vec<Bench> {
             compiler: "stack",
             args: vec!["ghc", "--", "-O2", "impls/haskell-bytestring-simple.hs", "-o", "exes/haskell-bytestring-simple"],
         }
-        , Bench {
-            name: "haskell-string",
-            compiler: "stack",
-            args: vec!["ghc", "--", "-O2", "impls/haskell-string.hs", "-o", "exes/haskell-string"],
-        }
+        // , Bench {
+        //     name: "haskell-string",
+        //     compiler: "stack",
+        //     args: vec!["ghc", "--", "-O2", "impls/haskell-string.hs", "-o", "exes/haskell-string"],
+        // }
         ]
 }
 
